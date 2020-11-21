@@ -2,7 +2,7 @@ import os
 import toolbox502
 import pandas as pd
 # Import from our lib
-from toolbox502.exchange import get_code, check_country, get_exchange_rate, test_get_exchange_rate_code
+from toolbox502.exchange import get_code, check_country, get_exchange_rate, get_exchange_rate_code
 import pytest
 
 
@@ -15,7 +15,7 @@ def test_check_country():
     assert check_country('mvifornitv') == False
 
 def test_get_exchange_rate_code():
-    assert test_get_exchange_rate_code("EUR", "EUR") == 1
+    assert get_exchange_rate_code("EUR", "EUR") == 1
 
 def test_get_exchange_rate():
     assert get_exchange_rate("France", "Germany") == 1

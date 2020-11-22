@@ -33,7 +33,7 @@ uninstal:
 # ----------------------------------
 #      UPLOAD PACKAGE TO PYPI
 # ----------------------------------
-#build:
+build:
 	@python setup.py sdist bdist_wheel
 
 pypi_test:

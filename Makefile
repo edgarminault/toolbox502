@@ -4,12 +4,6 @@
 install_requirements:
 	@pip install -r requirements.txt
 
-#check_code:
-	@flake8 scripts/* toolbox502/*.py
-
-#black:
-	@black scripts/* toolbox502/*.py
-
 test:
 	@coverage run -m pytest tests/*.py
 	@coverage report -m --omit=$(VIRTUAL_ENV)/lib/python*
@@ -36,21 +30,10 @@ uninstal:
 	@cat files.txt | xargs rm -rf
 	@rm -f files.txt
 
-count_lines:
-	@find ./ -name '*.py' -exec  wc -l {} \; | sort -n| awk \
-        '{printf "%4s %s\n", $$1, $$2}{s+=$$0}END{print s}'
-	@echo ''
-	@find ./scripts -name '*-*' -exec  wc -l {} \; | sort -n| awk \
-		        '{printf "%4s %s\n", $$1, $$2}{s+=$$0}END{print s}'
-	@echo ''
-	@find ./tests -name '*.py' -exec  wc -l {} \; | sort -n| awk \
-        '{printf "%4s %s\n", $$1, $$2}{s+=$$0}END{print s}'
-	@echo ''
-
 # ----------------------------------
 #      UPLOAD PACKAGE TO PYPI
 # ----------------------------------
-build:
+#build:
 	@python setup.py sdist bdist_wheel
 
 pypi_test:

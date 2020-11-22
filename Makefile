@@ -4,10 +4,10 @@
 install_requirements:
 	@pip install -r requirements.txt
 
-check_code:
+#check_code:
 	@flake8 scripts/* toolbox502/*.py
 
-black:
+#black:
 	@black scripts/* toolbox502/*.py
 
 test:
@@ -28,7 +28,7 @@ clean:
 install:
 	@pip install . -U
 
-all: clean install test black check_code
+all: clean install test #black check_code
 
 
 uninstal:

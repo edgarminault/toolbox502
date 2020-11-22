@@ -1,12 +1,15 @@
-# Data analysis
-- Document here the project: toolbox502
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+# Toolbox 502
+Aim of toolbox 502:
+- Provide a base template of python package to Le Wagon's Batch 502.
+- Aim of the package: Extract the exchange rate between two countries.
+- Data Source: (https://github.com/exchangeratesapi/exchangeratesapi)][exchangerateapi].
 
-Please document the project the better you can.
+# Install the package:
+`pip install toolbox502`
 
-# Stratup the project
+It was deployed on pypi and is available to everybody.
+
+# Startup the project
 
 The initial setup.
 
@@ -61,10 +64,10 @@ Functionnal test with a script:
 ```bash
   $ cd /tmp
   $ toolbox502-run
-``` 
+```
 
 # Continus integration
-## Github 
+## Github
 Every push of `master` branch will execute `.github/workflows/pythonpackages.yml` docker jobs.
 ## Gitlab
 Every push of `master` branch will execute `.gitlab-ci.yml` docker jobs.

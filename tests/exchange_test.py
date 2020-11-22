@@ -2,7 +2,7 @@ import os
 import toolbox502
 import pandas as pd
 
-# Import from our lib
+# Import from our exchange file
 from toolbox502.exchange import (
     get_code,
     check_country,
